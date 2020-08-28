@@ -7,4 +7,16 @@
 // ipsBetween("10.0.0.0", "10.0.1.0")   ===  256
 // ipsBetween("20.0.0.10", "20.0.1.0")  ===  246
 
-function ipsBetween(start, end) {}
+function ipsBetween(start, end) {
+	let s = start.split(".");
+	let e = end.split(".");
+	let result = 0;
+	for (let i in s) {
+		result += (+e[i] - +s[i]) * 256 ** (3 - i);
+	}
+
+	console.log("result: ", result);
+	return result;
+}
+
+ipsBetween("10.0.0.10", "10.0.1.0");
