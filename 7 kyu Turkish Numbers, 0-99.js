@@ -46,6 +46,8 @@ const getTurkishNumber = (num) => {
 	let tens = Math.floor(num / 10) * 10;
 	if (tens == 0) {
 		return obj[unit];
+	} else if (unit == 0) {
+		return obj[tens];
 	}
 	let result = obj[tens] + " " + obj[unit];
 	return result;
