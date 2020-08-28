@@ -15,7 +15,6 @@ function ipsBetween(start, end) {
 		result += (+e[i] - +s[i]) * 256 ** (3 - i);
 	}
 
-	console.log("result: ", result);
 	return result;
 }
 
