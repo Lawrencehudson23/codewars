@@ -7,8 +7,6 @@
 // wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
 
 function wave(str) {
-	if ((str.length = 0)) return [];
-
 	let result = [];
 
 	for (let i in str) {
