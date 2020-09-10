@@ -39,4 +39,4 @@ const minus = (x) => (y) => y - x;
 
 const times = (x) => (y) => y * x;
 
-const dividedBy = (x) => (y) => y / x;
+const dividedBy = (x) => (y) => Math.floor(y / x);
