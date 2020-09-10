@@ -18,16 +18,16 @@ var maxSequence = function (arr) {
 		subSum = 0;
 		count = 0;
 		for (let j = i; j < arr.length; j++) {
-			subSum += j;
+			subSum += arr[j];
 			if (subSum > sum) {
 				sum = subSum;
 			}
-			if (j < 0) {
-				count++;
-			}
-			if (count === arr.length - 1) {
-				return 0;
-			}
+		}
+		if (arr[j] < 0) {
+			count++;
+		}
+		if (count === arr.length - 1) {
+			return 0;
 		}
 	}
 	if (sum < 0) return 0;
