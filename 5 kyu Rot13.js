@@ -6,16 +6,20 @@ function rot13(message) {
 	let str = "abcdefghijklmnopqrstuvwxyz";
 	let cap = str.toUpperCase();
 	let result = "";
-	console.log("cap: ", cap);
+	// console.log("cap: ", cap);
 	for (let i = 0; i < str.length; i++) {
 		obj[str[i]] = str[(i + 13) % 26];
 		obj[cap[i]] = cap[(i + 13) % 26];
 	}
-	console.log("obj: ", obj);
+	// console.log("obj: ", obj);
 	for (let i of message) {
-		obj[i] ? (result += obj[i]) : i;
+		if (i in obj) {
+			result += obj[i];
+		} else {
+			result += i;
+		}
 	}
 	return result;
 }
-rot13("Test");
-console.log('rot13("Test"): ', rot13("Test"));
+rot13("test");
+console.log('rot13("test"): ', rot13("test"));
